@@ -6,19 +6,19 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/esquivel-deyvid/marcasblancas-app.git'
             }
         }
-        stage('Instalar dependencias') {
+        stage('Restaurar dependencias') {
             steps {
                 sh 'npm install || true'
             }
         }
         stage('Ejecutar pruebas') {
             steps {
-                sh 'echo "Pruebas OK"'
+                sh 'echo "Pruebas ejecutadas OK"'
             }
         }
-        stage('Publicar') {
+        stage('Publicar aplicacion') {
             steps {
-                sh 'echo "App Marcas Blancas lista para despliegue"'
+                sh 'echo "Aplicacion Marcas Blancas lista para despliegue"'
             }
         }
     }
